@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
+    <link rel="stylesheet" href="nav.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Stream</title>
+</head>
+<link rel="stylesheet"href="ss.css">
+    
+<body >
+    
+    <nav id="navbar">
+        <!---<div id="logo">
+            <img src="img/logo1.png" alt="MyOnlineMeal.com">
+        </div>--->
+        
+        <ul class="nav">
+            <!---
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>--->
+
+            <li><div class="container">
+                <h5>
+                    Current Time Is <span id="time"> </span>
+                </h5> 
+             </div></li>
+        </ul>
+    </nav>
+    <section id="home">
+    <div class="h1"><h1>Stock Stream</h1><Br>
+   
+    </div>
+      
+        <p>A perfect and smart way to start investing in Stocks</p>
+    <!---<button class="btn">Start Investing</button>--->
+    </section>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bxl-bitcoin'></i>
+            <div class="logo_name">Stock Stream</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <!--<li>
+                <a href="sign in through email.html">
+                    <i class='bx bx-chevron-right-circle'></i>
+                    <span class="links_name">Login</span>
+                </a>
+                <span class="tooltip">Login</span>
+            </li>
+            <li>
+                <a href="Profile.html">
+                    <i class='bx bx-user'></i>
+                    <span class="links_name" id="user">User</span>
+                </a>
+                <span class="tooltip">User</span>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Newsfeed</span>
+                </a>
+                <span class="tooltip">Newsfeed</span>
+            </li>-->
+
+            <li>
+                <a href="newsapi.html">
+                    <i class='bx bx-pie-chart-alt-2'></i>
+                    <span class="links_name">Stock Analysis</span>
+                </a>
+                <span class="tooltip">Stock Analysis</span>
+            </li>
+            
+            <li>
+                <a href="Project Blog.html">
+                    <i class='bx bx-chat'></i>
+                    <span class="links_name">Blogs</span>
+                </a>
+                <span class="tooltip">Blogs</span>
+            </li>
+
+            <li>
+                <a href="timeline.html">
+                    <i class='bx bxs-map-alt'></i>
+                    <span class="links_name">Roadmap</span>
+                </a>
+                <span class="tooltip">Roadmap</span>
+            </li>
+
+            <li>
+                <a href="index.html">
+                    <i class='bx bx-help-circle'></i>
+                    <span class="links_name">Helpdesk</span>
+                </a>
+                <span class="tooltip">Helpdesk</span>
+            </li>
+            <li>
+                <a href="Teams.html">
+                    <i class='bx bxl-microsoft-teams'></i>
+                    <span class="links_name">Our Team</span>
+                </a>
+                <span class="tooltip">Our Team</span>
+            </li>
+            
+            <li>
+                <a href="front (1).html">
+                    <i class='bx bx-log-out'></i>
+                    <span class="links_name">Logout</span>
+                    <!--<button>Logout</button>-->
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!---<section class="home-section">
+        <div class="text">Dashboard</div>
+    </section>--->
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let closeBtn = document.querySelector("#btn");
+        let searchBtn = document.querySelector(".bx-search");
+
+        closeBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+            menuBtnChange();//calling the function(optional)
+        });
+
+        searchBtn.addEventListener("click", () => { // Sidebar open when you click on the search iocn
+            sidebar.classList.toggle("open");
+            menuBtnChange(); //calling the function(optional)
+        });
+
+        // following are the code to change sidebar button(optional)
+        function menuBtnChange() {
+            if (sidebar.classList.contains("open")) {
+                closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+            } else {
+                closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");//replacing the iocns class
+            }
+        }
+    </script>
+
+    <section id="services-container">
+        <h1 class="h-primary center">One platform. Multiple investment opportunities.</h1>
+        <p class="para">Long term investors, pro traders or part-time traders can choose across various asset classes and create a customised portfolio. All from one platform.</p>
+        <div id="services">
+            <div class="box" id="box1">
+                <img src="img/stock_2x.png" alt="">
+                <h2 class="h-secondary center">Stocks</h2>
+                <p class="center">Easy, fast and simple interface</p>
+                <p class="center">Up to ₹20/order on Equity</p>
+                <p class="center">100+ charts with 250+ indicators</p>
+            </div>
+            <div class="box">
+                <img src="img/mf_2x.png" alt="">
+                <h2 class="h-secondary center">Mutual Funds</h2>
+                <p class="center">2000+ Mutual Fund schemes</p>
+                <p class="center">Earn higher returns on Direct Mutual Funds</p>
+                <p class="center">Invest as low as ₹500</p>
+            </div>
+            <div class="box">
+                <img src="img/ipo_2x.png" alt="">
+                <h2 class="h-secondary center">IPOs</h2>
+                <p class="center">Invest in Stocks before they are listed</p>
+                <p class="center">Apply for IPOs through UPI</p>
+                <p class="center">Track your IPO application easily </p>
+            </div>
+            <div class="box">
+                <img src="img/feature_2x.png" alt="">
+                <h2 class="h-secondary center">Future & Options</h2>
+                <p class="center">Pay just up to ₹20* per order</p>
+                <p class="center">Option chain with strategy mode</p>
+                <p class="center">TradingView and ChartsIQ chart libraries </p>
+            </div>
+
+        </div>
+    </section>
+    <section id="client-section">
+        
+        <div id="clients">
+            
+
+            </div>
+            
+        </div>
+
+    </section>
+    <section id="quotes-section">
+        
+        <div id="quotes">
+            <div class="box" id="b1">
+               
+                    <img src="img/RJ.jpeg" alt="">
+                    
+                    <p class="speech center"></p>"Compounding Is The 8th wonder of the world, </p>
+                    <p class="speech center"></p>One Can Easily See It Doing Wonders In The Stock Market."</p>
+                </div>
+                <div class="box" id="b2">
+                    
+                    <img src="img/si.jpeg" alt="">
+                    <p class="speech center">"Stock Market Is A Game Of Long Term Patience.</p>
+                        <p class="speech center">The stock market transfers money from active to patient."</p>
+            </div>
+
+            </div>
+            
+        </div>
+
+    </section>
+    <!---
+    <section id="client-section">
+        <h1 class="h-primary center">Powerful platform for easy investing.</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="img/go1.jpg" alt="">
+                <h4>Digital account opening</h4>
+                <p>Paperless and hassle-free account opening process</p>
+            </div>
+            <div class="client-item">
+                <img src="img/go2.jpg" alt="">
+                <h4>Informed & intuitive investing</h4>
+                <p>Charts, financial data, news to help you make better decisions</p>
+            </div>
+          
+            <div class="client-item">
+                <img src="img/go4.jpg" alt="">
+                <h4>Fast & secure</h4>
+                <p>Comprehensive 2FA authentication</p>
+            </div>
+            
+        </div>
+
+    </section>
+    --->
+    <!---
+    <section id="contact">
+        <h1 class="h-primary center" id="color">Contact Us</h1>
+        
+
+        <div id="contact-box">
+           <div id="para">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt porro dolore iste aperiam, vel impedit similique animi doloribus aliquid, quia eos doloremque praesentium ab odit quibusdam possimus et deserunt voluptatum!</p>
+
+            </div> 
+            <div>
+
+
+                <form action="">
+                    <div class="form-group">
+                        <label for="name">Name: </label>
+                        <input type="text" name="name" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email: </label>
+                        <input type="email" name="name" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number: </label>
+                        <input type="phone" name="name" id="phone" placeholder="Enter your phone number">
+                    </div>
+                    <button class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>--->
+    
+    
+    <script src="ss.js"></script>
+</body>
+</html>
